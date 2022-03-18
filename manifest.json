@@ -1,0 +1,25 @@
+{
+    "name": "Insta-Hint",
+    "version": "2.1",
+    "description": "Automatycznie podaje odpowiedzi do Instalinga.",
+    "icons": {},
+    "manifest_version": 3,
+
+    "permissions": ["webRequest"],
+
+    "content_scripts": [
+        {
+            "matches": ["https://instaling.pl/ling2/html_app/*"],
+            "js": ["content.js"]
+        }
+    ],
+
+    "web_accessible_resources": [
+        {
+            "resources": ["inject.js"],
+            "matches": ["https://instaling.pl/*"]
+        }
+    ],
+
+    "action": {}
+}
